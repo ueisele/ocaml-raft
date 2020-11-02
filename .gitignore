@@ -14,8 +14,11 @@ setup.data
 setup.log
 setup.bin
 
-# project specific 
+# project specific
 *_testing
 output.log
 *.data
 js/core_kernel_js
+
+# node
+node_modules

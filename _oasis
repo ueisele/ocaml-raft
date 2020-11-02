@@ -27,7 +27,7 @@ Executable cmdstart
   BuildTools: ocamlbuild
   MainIs:     cmdstart.ml
   BuildDepends: core
-  
+
 Executable configstart
   Path:       lib
   BuildTools: ocamlbuild
@@ -36,4 +36,4 @@ Executable configstart
 Executable jsonstart
   Path:       lib
   BuildTools: ocamlbuild
-  MainIs:     jparser.ml  
+  MainIs:     jparser.ml

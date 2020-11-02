@@ -1,0 +1,46 @@
+{
+  "name": "ocaml-raft",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+    "--user=opam",
+    "--cap-add=SYS_PTRACE",
+    "--security-opt=seccomp=unconfined"
+  ],
+  "remoteUser": "opam",
+  "containerUser": "opam",
+  "forwardPorts": [8000],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnSave": true,
+    "ocaml-formatter.profile": "janestreet",
+    "[ocaml]": {
+      "editor.defaultFormatter": "badochov.ocaml-formatter"
+    },
+    "python.pythonPath": "/usr/local/python/3.9.0/bin/python",
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+    "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+    "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+		"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+		"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+		"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+		"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+		"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
+  },
+  "extensions": [
+    "github.vscode-pull-request-github",
+    "editorconfig.editorconfig",
+    "rubymaniac.vscode-direnv",
+    "jaredly.reason-vscode",
+    //"ocamllabs.ocaml-platform",
+    "badochov.ocaml-formatter",
+    "dbaeumer.vscode-eslint",
+    "christian-kohler.npm-intellisense",
+    "ms-python.python",
+    "mads-hartmann.bash-ide-vscode",
+    "joaompinto.vscode-graphviz"
+  ]
+}
