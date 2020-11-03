@@ -16,11 +16,11 @@ for line in fileinput.input():
 
 	elif (line.find('"newMode"') > -1):
 		nodeModeChanges.append(line)
-	
+
 	elif (line.lstrip().startswith('"arrives":')):
 		messages.append(packetStart + line)
-	
 
-print (('{' + numNodes + '"messages":[' + string.join(messages,",") + '],"nodeModeChanges":[' + string.join(nodeModeChanges,",") + '],"timeouts":[' + string.join(timeouts,",") + ']}') )
+
+print (('{' + numNodes + '"messages":[' + ",".join(messages) + '],"nodeModeChanges":[' + ",".join(nodeModeChanges) + '],"timeouts":[' + ",".join(timeouts) + ']}') )
 
 

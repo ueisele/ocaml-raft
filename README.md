@@ -17,5 +17,5 @@ $ make
 $ ./cmdstart.byte discrete -nodes 3  -follower Uniform-150-155 -candidate Uniform-11-22 -leader Fixed-75 -delay Fixed-7 -termOnTimeout 50000 -termOnElec -cmds 0 -backoff -json > output.json
 $ cat output.json | python vis/parseJSON.py > vis/data.json
 $ cd vis
-$ python -m SimpleHTTPServer 8000
+$ python -m http.server 8000
 ```
